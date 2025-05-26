@@ -1,0 +1,16 @@
+{
+  "platforms": [
+    "apple",
+    "android"
+  ],
+  "apple": {
+    "modules": [
+      "ExpoMilibrisModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "expo.modules.milibris.ExpoMilibrisModule"
+    ]
+  }
+} 

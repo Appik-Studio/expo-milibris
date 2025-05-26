@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+group = 'expo.modules.milibris'
+version = '0.1.0'
+
+buildscript {
+  def expoModulesCorePlugin = new File(project(":expo-modules-core").projectDir.absolutePath, "ExpoModulesCorePlugin.gradle")
+  if (expoModulesCorePlugin.exists()) {
+    apply from: expoModulesCorePlugin
+    applyKotlinExpoModulesCorePlugin()
+  }
+
+  ext.safeExtGet = { prop, fallback ->
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+  }
+}
+
+android {
+  compileSdkVersion safeExtGet("compileSdkVersion", 34)
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  kotlinOptions {
+    jvmTarget = JavaVersion.VERSION_17.majorVersion
+  }
+
+  namespace "expo.modules.milibris"
+  defaultConfig {
+    minSdkVersion safeExtGet("minSdkVersion", 21)
+    targetSdkVersion safeExtGet("targetSdkVersion", 34)
+    versionCode 1
+    versionName "0.1.0"
+  }
+  lintOptions {
+    abortOnError false
+  }
+  publishing {
+    singleVariant("release") {
+      withSourcesJar()
+    }
+  }
+}
+
+repositories {
+  google()
+  mavenCentral()
+  maven { url 'https://maven-android-sdk.milibris.net/' }
+}
+
+dependencies {
+  implementation project(':expo-modules-core')
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+  
+  def miLibrisReader = "1.15.0"
+  implementation("com.milibris:one-reader:$miLibrisReader") {
+    exclude group: "androidx.lifecycle"
+  }
+  implementation "com.milibris:milibris-reader:$miLibrisReader"
+} 

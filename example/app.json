@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "expo-milibris-example",
+    "slug": "expo-milibris-example",
+    "scheme": "expo-milibris-example",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "newArchEnabled": true,
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "expo.modules.milibris.example"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "expo.modules.milibris.example"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraMavenRepos": ["https://maven-android-sdk.milibris.net/"]
+          }
+        }
+      ]
+    ]
+  }
+} 

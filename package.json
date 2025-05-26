@@ -1,0 +1,58 @@
+{
+  "name": "expo-milibris",
+  "version": "0.1.0",
+  "description": "Using miLibris native SDK for iOS and Android",
+  "main": "src/index",
+  "types": "src/index",
+  "exports": {
+    ".": {
+      "import": "./src/index",
+      "types": "./src/index"
+    }
+  },
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-milibris",
+    "ExpoMilibris",
+    "milibris",
+    "reader",
+    "epaper"
+  ],
+  "repository": "https://github.com/LivioGama/expo-milibris.git",
+  "bugs": {
+    "url": "https://github.com/LivioGama/expo-milibris.git/issues"
+  },
+  "author": "Livio Gamassia <livio.gamassia@gmail.com> (LivioGama)",
+  "license": "MIT",
+  "homepage": "https://github.com/LivioGama/expo-milibris.git#readme",
+  "dependencies": {
+    "expo": "~52.0.46",
+    "react": "18.3.1",
+    "react-native": "0.76.9"
+  },
+  "devDependencies": {
+    "@types/react": "~18.3.12",
+    "expo-module-scripts": "^4.0.2",
+    "expo": "~52.0.0",
+    "react-native": "0.76.0"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}
