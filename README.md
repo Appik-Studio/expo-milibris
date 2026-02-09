@@ -221,4 +221,8 @@ Contributions are welcome! Please read our contributing guidelines and submit pu
 
 ---
 
-**Note**: This plugin requires a valid miLibris license key and content files. Contact miLibris support for integration assistance and licensing information. 
+**Note**: This plugin requires a valid miLibris license key and content files. Contact miLibris support for integration assistance and licensing information.
+
+---
+
+<sub>Swiss made by [Appik Studio](https://www.appik-studio.ch) 🖤</sub>
